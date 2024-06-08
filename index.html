@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крестики-нолики</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-screen">
+        <h1>Крестики-нолики</h1>
+        <input type="text" id="player1-name" placeholder="Имя игрока 1 (X)">
+        <input type="text" id="player2-name" placeholder="Имя игрока 2 (O)">
+        <button id="start-game">Начать игру</button>
+        <div id="results">
+            <h2>Результаты</h2>
+            <ul id="results-list"></ul>
+        </div>
+        <label for="theme-switch">Тема:</label>
+        <input type="range" id="theme-switch" min="0" max="1" step="1" value="0">
+    </div>
+
+    <div id="game-screen" style="display: none;">
+        <div id="game-board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div id="player-info">
+            <p>Ход: <span id="current-player-name"></span> (<span id="current-player">X</span>)</p>
+        </div>
+
+        <button id="reset-game">Новая игра</button>
+    </div>
+
+    <div id="result-screen" style="display: none;">
+        <h2>Результат</h2>
+        <p id="result-text"></p>
+        <button id="back-to-main">В главное меню</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

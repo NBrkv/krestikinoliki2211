@@ -1,0 +1,128 @@
+/* Базовые стили */
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Светлая тема */
+    transition: background-color 0.3s ease;
+    color: #333; /* Цвет текста */
+}
+
+#main-screen, #game-screen, #result-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* Светлая тема */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    color: #333; /* Цвет текста */
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#results-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #ccc; /* Светлая тема */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    color: #333; /* Цвет текста */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333; /* Цвет текста */
+}
+
+/* Стили ползунка */
+#theme-switch {
+    -webkit-appearance: none;
+    width: 45px;
+    height: 20px;
+    background: #d3d3d3;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#theme-switch::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#theme-switch::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Темная тема */
+body.dark {
+    background-color: #222;
+    color: #fff; /* Цвет текста */
+}
+
+#main-screen.dark, #game-screen.dark, #result-screen.dark {
+    background-color: #333;
+    color: #fff; /* Цвет текста */
+}
+
+.cell.dark {
+    border: 2px solid #555;
+    color: #fff; /* Цвет текста */
+}
